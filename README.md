@@ -2,10 +2,15 @@
 
 ## Build Image use locally
 ```bash
-sudo chmod +x start.sh
+docker image build -t suvambasak/pyimg:test .
+```
+## Push to Docker hub
+```bash
+docker login
 ```
 ```bash
-./start.sh
+docker push suvambasak/pyimg:test
+
 ```
 
 ## Multi-CPU Architecture Support

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <title>TOSCA | Docker Swarm</title>
+</head>
+
+<body>
+    <div class="container my-5" align="center">
+        <Button class="btn btn-dark btn-sm" id="btn">Fetch JSON</Button>
+    </div>
+    <hr>
+    <div class="container" align="center">
+        <p id="info"></p>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                console.log('led_status');
+
+                $.getJSON(window.location.origin + '/api', function (data) {
+                    $("#info").append('Response: ' + data + '<br>');
+                    $("#info").append('<hr>');
+                });
+            });
+
+        });
+    </script>
+</body>
+
+</html>

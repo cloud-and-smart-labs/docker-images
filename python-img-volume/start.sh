@@ -1,0 +1,1 @@
+docker container run -v /tmp:/home suvambasak/pyimg:vol
