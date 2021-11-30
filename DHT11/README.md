@@ -12,3 +12,8 @@ sudo chmod +x start.sh build.sh
 ```bash
 ./build.sh
 ```
+
+## Compose file
+```bash
+docker-compose up
+```

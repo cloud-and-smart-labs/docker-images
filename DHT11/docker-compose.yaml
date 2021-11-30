@@ -1,0 +1,8 @@
+version: "3.8"
+services:
+  python_rpi_dht11:
+    image: suvambasak/pyimg:dht11
+    volumes:
+      - /sys:/sys
+      - /usr:/usr
+    privileged: true

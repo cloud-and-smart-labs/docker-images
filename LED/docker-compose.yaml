@@ -1,0 +1,8 @@
+version: "3.8"
+services:
+  python_rpi_led:
+    image: suvambasak/pyimg:led
+    volumes:
+      - /sys:/sys
+      - /usr:/usr
+    privileged: true
