@@ -1,1 +1,1 @@
-docker container run --privileged -v /sys:/sys -v /usr:/usr suvambasak/pyimg:ledblink
+docker container run --privileged -v /sys:/sys -v /usr:/usr -d suvambasak/pyimg:ledblink
