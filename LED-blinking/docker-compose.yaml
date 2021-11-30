@@ -1,0 +1,8 @@
+version: "3.8"
+services:
+  python_rpi_ledblink:
+    image: suvambasak/pyimg:ledblink
+    volumes:
+      - /sys:/sys
+      - /usr:/usr
+    privileged: true
