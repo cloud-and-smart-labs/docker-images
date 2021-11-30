@@ -1,1 +1,1 @@
-docker container run --privileged -v /sys:/sys -v /usr:/usr -d -e IP=192.168.0.112 suvambasak/pyimg:ledblink
+docker container run --privileged -v /sys:/sys -v /usr:/usr -d -e IP=$(echo $(hostname -I) | awk '{print $1}') suvambasak/pyimg:ledblink
