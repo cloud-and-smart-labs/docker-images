@@ -1,8 +1,17 @@
 version: "3.8"
 services:
-  python_rpi_ledblink:
+  flask_deplay_api:
+    image: suvambasak/pyimg:delayapi
+    ports:
+      - 80:5000
+
+  rpi_ledblink:
     image: suvambasak/pyimg:ledblink
+    privileged: true
+    depends_on:
+      - flask_deplay_api
     volumes:
       - /sys:/sys
       - /usr:/usr
-    privileged: true
+    environment:
+      - IP=192.168.0.112
