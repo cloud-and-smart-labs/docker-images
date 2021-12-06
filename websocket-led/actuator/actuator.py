@@ -1,12 +1,13 @@
 import asyncio
 import websockets
 import json
+import os
 
 import RPi.GPIO as GPIO
 
 
 
-URL = 'ws://0.0.0.0:7890'
+URL = 'ws://'+os.environ['IP']+':7890'
 STATE = False
 
 async def client():
