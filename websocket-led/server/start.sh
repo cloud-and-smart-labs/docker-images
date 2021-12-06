@@ -1,0 +1,1 @@
+docker container run -p 7890:7890 -d suvambasak/pyimg:websocketledserver
