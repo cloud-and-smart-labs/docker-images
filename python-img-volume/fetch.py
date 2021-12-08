@@ -2,6 +2,7 @@ from urllib.request import urlopen
 import json
 import ssl
 
+
 class Subscribe:
     '''
     ThingSpeak Cloud subscribe
@@ -18,14 +19,15 @@ class Subscribe:
     def fetch_update(self):
         # function to fetch date from Chennel API
 
-        with urlopen(self.URL,context=self.context) as url:
+        with urlopen(self.URL, context=self.context) as url:
             # parse JSON
             data = json.loads(url.read().decode())
-            
+
             return data
+
 
 if __name__ == '__main__':
     source = Subscribe()
-    f = open('/home/data.json','w')
-    f.write(json.dumps(source.fetch_update(),indent = 1))
+    f = open('/home/data.json', 'w')
+    f.write(json.dumps(source.fetch_update(), indent=1))
     f.close()

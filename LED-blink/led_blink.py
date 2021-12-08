@@ -25,7 +25,7 @@ try:
         GPIO.output(pin, GPIO.LOW)
         time.sleep(get_delay(URL))
 except Exception as e:
-    print (str(e))
+    print(str(e))
     GPIO.output(pin, GPIO.LOW)
 finally:
     GPIO.output(pin, GPIO.LOW)
