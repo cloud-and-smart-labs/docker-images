@@ -6,9 +6,9 @@ import os
 import RPi.GPIO as GPIO
 
 
-
 URL = 'ws://'+os.environ['IP']+':7890'
 STATE = False
+
 
 async def client():
     try:
@@ -30,7 +30,6 @@ async def client():
 
     except Exception as e:
         print(str(e))
-
 
 
 GPIO.setmode(GPIO.BCM)
