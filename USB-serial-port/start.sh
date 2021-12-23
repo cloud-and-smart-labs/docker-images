@@ -1,0 +1,1 @@
+docker container run -it --device=/dev/ttyACM0:/dev/ttyACM0 suvambasak/serial:usb
