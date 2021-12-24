@@ -1,5 +1,10 @@
 apt update -y && apt upgrade -y;
-apt install curl vim nano apt-utils git python3 python3-pip net-tools -y;
-curl -fsSL https://get.docker.com | sh ;
-service docker start ;
-pip3 install opera --no-cache-dir ;
+apt install curl vim nano apt-utils git python3 python3-pip net-tools openssh-server openssh-client sudo  -y;
+curl -fsSL https://get.docker.com | sh;
+service docker start;
+service ssh start;
+pip3 install opera --no-cache-dir;
+adduser pi;
+usermod -aG sudo pi;
+usermod -aG docker pi;
+su - pi;
