@@ -1,3 +1,4 @@
+apt update -y && apt upgrade -y;
 apt install openssh-server -y;
 curl -fsSL https://get.docker.com | sh;
 service docker start;
