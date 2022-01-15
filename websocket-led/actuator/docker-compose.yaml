@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  led_actuator:
+    image: suvambasak/pyimg:websocketledactuator
+    volumes:
+      - /sys:/sys
+      - /usr:/usr
+    privileged: true
+    environment:
+      - IP=192.168.0.166

@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  websocket_server:
+    image: suvambasak/pyimg:websocketledserver
+    ports:
+      - "7890:7890"
+
+  nginx:
+    image: suvambasak/webpage:websocketled
+    depends_on:
+      - websocket_server
+    ports:
+      - "80:80"
