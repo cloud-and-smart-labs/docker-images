@@ -1,24 +1,17 @@
-# Ubuntu Testbed (Docker, xOpera, Ansible, Git)
+# Ubuntu Testbed
+To test Dynamic Deployment on a single machine.
 
-## Build Image use locally
+## Build Image
 ```bash
 docker image build -t suvambasak/ubuntu:testbed .
 ```
-## Start container
+## Start Container in Privileged Mode
 ```bash
 docker container run -it --privileged --rm suvambasak/ubuntu:testbed
 ```
 
 ## Setup
-Inside container execute the shell script.
+Inside the container execute the shell script `setup.sh` to install Docker Engine and create a user called `pi` automatically.
 ```bash
 ./setup.sh
 ```
-
-<!-- ## Compose file
-```bash
-docker-compose up -d
-```
-```bash
-docker-compose down
-``` -->

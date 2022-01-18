@@ -1,1 +1,0 @@
-docker container run --privileged -v /sys:/sys -v /usr:/usr -d suvambasak/pyimg:ledblinkcleanup

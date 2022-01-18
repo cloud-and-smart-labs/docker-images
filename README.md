@@ -1,23 +1,29 @@
-# Docker Images and Docker Compose
+# Docker Support
+Docker support repository contains all the Dockerfile, Docker-Compose files with the source code of application components.
 
-## Build Image use locally
+## Table of Contents
+- [Docker Image Building](#docker-image-building)
+- [Docker Buildx](#docker-buildx)
+
+## Docker Image Building
+There must be a docker file to build an image.
+### Build
 ```bash
-docker image build -t suvambasak/pyimg:test .
+docker image build -t username/image_name:image_tag .
 ```
-## Push to Docker hub
+### Push to Docker Hub
+A [Docker Hub](https://hub.docker.com/) account is required.
 ```bash
 docker login
 ```
+Push the image to the Docker Hub.
 ```bash
-docker push suvambasak/pyimg:test
+docker push username/image_name:image_tag
 
 ```
 
-## Multi-CPU Architecture Support
-### Login 
-```bash
-docker login
-```
+## Docker Buildx
+Create Docker Image that supports multiple CPU architectures.
 
 ### Create a new builder
 ```bash
@@ -34,7 +40,13 @@ docker buildx inspect --bootstrap
 ```
 
 
-### Build the image for multiple architecture and push to the registry
+### Build the image for multiple CPU architectures and push it to the Docker Hub
+The image will be available for the CPU architecture:
+- linux/arm64
+- linux/amd64
+- linux/arm/v7
+- linux/arm/v6
+
 ```bash
-docker buildx build --platform linux/arm64,linux/amd64,linux/arm/v7,linux/arm/v6 -t suvambasak/pyimg:test --push .
+docker buildx build --platform linux/arm64,linux/amd64,linux/arm/v7,linux/arm/v6 -t username/image_name:image_tag --push .
 ```

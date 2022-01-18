@@ -1,1 +1,0 @@
-docker image build -t suvambasak/ubuntu:testbed .
