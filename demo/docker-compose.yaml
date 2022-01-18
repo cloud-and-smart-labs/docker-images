@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  flask_api:
+    image: suvambasak/demo:api
+    volumes:
+      - /tmp:/tmp
+    ports:
+      - "8080:5000"
+  webserver_nginx:
+    image: suvambasak/demo:webserver
+    depends_on:
+      - flask_api
+    ports:
+      - "80:80"
