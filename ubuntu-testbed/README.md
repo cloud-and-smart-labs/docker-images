@@ -3,11 +3,11 @@ To test Dynamic Deployment on a single machine.
 
 ## Build Image
 ```bash
-docker image build -t suvambasak/ubuntu:testbed .
+docker image build -t suvambasak/ubuntu:latest .
 ```
 ## Start Container in Privileged Mode
 ```bash
-docker container run -it --privileged --rm suvambasak/ubuntu:testbed
+docker container run -it --privileged --rm suvambasak/ubuntu:latest
 ```
 
 ## Setup
